@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 	
 	EditText operand1, operand2;
-	Button btnPlus, btnSubtract, btnMultiply, btnDivide;
+	Button btnPlus, btnSubtract, btnMultiply, btnDivide, btnClear;
 	TextView result;
 
 	@Override
@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
 		btnSubtract = (Button) findViewById(R.id.btnSubtract);
 		btnMultiply = (Button) findViewById(R.id.btnMultiply);
 		btnDivide = (Button) findViewById(R.id.btnDivide);
+		btnClear = (Button) findViewById(R.id.btnClear);
 		
 		// Result Field
 		result = (TextView) findViewById(R.id.textResult);
@@ -88,6 +89,17 @@ public class MainActivity extends Activity {
 				
 				float divideResult = oper1 / oper2;
 				result.setText(Float.toString(divideResult));
+				
+			}
+		});
+		
+		btnClear.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {				
+				operand1.setText("");
+				operand2.setText("");
+				result.setText("0.00");
 				
 			}
 		});

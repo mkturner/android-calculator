@@ -65,6 +65,13 @@
             android:layout_height="wrap_content"
             android:text="/" />
 
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonStyleSmall"
+            android:text="CLR" />
+
     </TableRow>
 
     <TextView
